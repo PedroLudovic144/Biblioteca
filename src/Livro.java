@@ -1,13 +1,13 @@
 public class Livro {
 
-    String autor;
-    Editora editora;
-    boolean capa;
-    double preco = 15;
-    String dercricao ;
-    String resumo;
-    String titulo;
-    TipoDeCapaEnum tipoCapa;
+    private String autor;
+    private Editora editora;
+    private String capa;
+    private double preco = 15;
+    private String dercricao ;
+    private String resumo;
+    private String titulo;
+    private TipoDeCapaEnum tipoCapa;
     void exibir(){
         System.out.println("Detalhes do livro:"+dercricao);
         System.out.println("Titulo:"+ titulo);
@@ -34,8 +34,21 @@ public class Livro {
                 //preco-=preco*0.15;
     }
 
+    public Livro() {
+        tipoCapa = TipoDeCapaEnum.COMUM;
+    }
 
+    public Livro(TipoDeCapaEnum tipoCapa) {
+        this.tipoCapa = tipoCapa.PERSONALIZADA;
 
-}
+    }
+    void CobrarCapa(){
+        if (tipoCapa == tipoCapa.PERSONALIZADA);
+            preco = preco +5;
+    }//else if(tipoCapa == TipoDeCapaEnum.Dura){
+        //preco = preco + 10
+    }
+
+//}
 
 
