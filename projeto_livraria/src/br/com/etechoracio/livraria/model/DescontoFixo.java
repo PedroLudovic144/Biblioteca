@@ -1,4 +1,5 @@
 package br.com.etechoracio.livraria.model;
+package br.com.etechoracio.livraria.exception.ValorDescontoExpeption;
 
 import java.security.InvalidParameterException;
 
@@ -7,6 +8,7 @@ public class DescontoFixo implements Desconto {
 
     public double aplicar(double preco)  {
         if(valor > preco){
+            //throw new ValorDescontoExcetion();
             throw new IllegalArgumentException("Valor de desconto exedido");
         }
         if(valor < 0){
