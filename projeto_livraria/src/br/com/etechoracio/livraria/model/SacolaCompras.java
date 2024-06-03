@@ -11,7 +11,9 @@ public class SacolaCompras {
             if (item instanceof Oferta) {
                 ((Oferta) item).aplicarDesconto(new DescontoFixo(-500));
             }
-        } catch (Exception e){
+        } catch (InvalidParameterException e){
+            System.out.println("negativo bb?");
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
 
